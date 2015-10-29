@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/josemora/Documents/teh_codez/Current/my-site/jekyll-site'
+let g:netrw_dirhist_2='/Users/josemora'
+let g:netrw_dirhist_3='/Users/josemora/.gnupg'
+let g:netrw_dirhist_4='/Users/josemora'
+let g:netrw_dirhist_5='/Users/josemora/code'
+let g:netrw_dirhist_6='/Users/josemora/code/Current'
+let g:netrw_dirhist_7='/Users/josemora/code/Current/my-site'
+let g:netrw_dirhist_8='/Users/josemora/code/Current/my-site/jekyll-site'
