@@ -17,3 +17,5 @@ set tabstop=3
 set shiftwidth=3
 " " On pressing tab, insert 4 spaces
 set expandtab
+
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 
