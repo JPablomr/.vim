@@ -1,5 +1,6 @@
 execute pathogen#infect()
 syntax on
+colorscheme PaperColor
 filetype plugin indent on
 set number
 set laststatus=2
