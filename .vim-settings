@@ -1,9 +1,10 @@
 execute pathogen#infect()
 syntax on
-colorscheme PaperColor
 filetype plugin indent on
 set number
 set laststatus=2
+
+let ruby_space_errors=1
 
 autocmd StdinReadPre * let s:std_in=1
 " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -18,5 +19,8 @@ set tabstop=3
 set shiftwidth=3
 " " On pressing tab, insert 4 spaces
 set expandtab
+
+" iterm High-Color mode
+set t_Co=256
 
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 
