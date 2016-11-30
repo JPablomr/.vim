@@ -4,7 +4,6 @@ filetype plugin indent on
 set number
 set laststatus=2
 
-let ruby_space_errors=1
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -23,4 +22,26 @@ set expandtab
 " iterm High-Color mode
 set t_Co=256
 
-autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 
+" Let's get a copy to clipboard
+map <C-c> :call system('pbcopy', @")<CR>
+
+" ag settings
+let g:ackprg = 'ag --vimgrep'
+cnoreabbrev Ack Ack!
+nnoremap A :Ack!<Space>
+
+" functions!
+
+:function Deltrailing()
+  :%s/\s\+$//g
+  :w
+:endfunction
+
+" functions!
+
+
+
+" Two spaces for rubby
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
+" Warn me about spaces
+let ruby_space_errors=1
