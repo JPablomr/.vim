@@ -4,9 +4,15 @@ filetype plugin indent on
 set number
 set laststatus=2
 
+" Nerdtree
 
+" Open nerdtree if there's no file open
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Close nerdtree if it's the last pane
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 map <C-n> :NERDTreeToggle<CR>
 
 command CDC cd %:p:h
@@ -28,7 +34,7 @@ map <C-c> :call system('pbcopy', @")<CR>
 " ag settings
 let g:ackprg = 'ag --vimgrep'
 cnoreabbrev Ack Ack!
-nnoremap A :Ack!<Space>
+nnoremap <C-a> :Ack!<Space>
 
 " functions!
 
