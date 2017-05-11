@@ -45,5 +45,5 @@ endfunction
 
 " Warn me about spaces
 let ruby_space_errors=1
-# Terraform
+" Terraform
 autocmd FileType terraform setlocal commentstring=#%s
