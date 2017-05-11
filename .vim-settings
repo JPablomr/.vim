@@ -1,29 +1,27 @@
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
-set number
 set laststatus=2
 
+filetype plugin indent on
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+:imap zx <Esc>
+
 " Nerdtree
+   " Open nerdtree if there's no file open
+   " autocmd StdinReadPre * let s:std_in=1
+   " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-" Open nerdtree if there's no file open
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-" Close nerdtree if it's the last pane
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+   " Close nerdtree if it's the last pane
+   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 map <C-n> :NERDTreeToggle<CR>
 
 command CDC cd %:p:h
 
-filetype plugin indent on
-" show existing tab with 4 spaces width
-set tabstop=3
-" " when indenting with '>', use 4 spaces width
-set shiftwidth=3
-" " On pressing tab, insert 4 spaces
-set expandtab
 
 " iterm High-Color mode
 set t_Co=256
@@ -32,22 +30,20 @@ set t_Co=256
 map <C-c> :call system('pbcopy', @")<CR>
 
 " ag settings
-let g:ackprg = 'ag --vimgrep'
-cnoreabbrev Ack Ack!
-nnoremap <C-a> :Ack!<Space>
+   let g:ackprg = 'ag --vimgrep'
+   cnoreabbrev Ack Ack!
+   nnoremap <C-a> :Ack!<Space>
 
 " functions!
 
-:function Deltrailing()
-  :%s/\s\+$//g
-  :w
-:endfunction
+function Deltrailing()
+  %s/\s\+$//g
+  w
+endfunction
 
 " functions!
 
-
-
-" Two spaces for rubby
-autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 " Warn me about spaces
 let ruby_space_errors=1
+# Terraform
+autocmd FileType terraform setlocal commentstring=#%s
