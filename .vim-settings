@@ -9,8 +9,6 @@ set shiftwidth=2
 set expandtab
 set cm=blowfish2
 
-:imap zx <Esc>
-
 " Nerdtree
    " Open nerdtree if there's no file open
    " autocmd StdinReadPre * let s:std_in=1
