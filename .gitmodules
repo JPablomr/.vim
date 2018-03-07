@@ -21,13 +21,13 @@
 	url = git://github.com/tpope/vim-surround.git
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
-	url = git@github.com:vim-syntastic/syntastic.git 
+	url = https://github.com/vim-syntastic/syntastic.git 
 [submodule "bundle/vim-commentary"]
 	path = bundle/vim-commentary
 	url = git://github.com/tpope/vim-commentary.git
 [submodule "bundle/ack.vim"]
 	path = bundle/ack.vim
-	url = git@github.com:mileszs/ack.vim.git
+	url = https://github.com/mileszs/ack.vim.git
 [submodule "bundle/vim-go"]
 	path = bundle/vim-go
 	url = https://github.com/fatih/vim-go.git
@@ -36,7 +36,7 @@
 	url = https://github.com/hashivim/vim-terraform.git
 [submodule "bundle/salt-vim"]
 	path = bundle/salt-vim
-	url = git@github.com:saltstack/salt-vim.git
+	url = https://github.com/saltstack/salt-vim.git
 [submodule "bundle/vimwiki"]
 	path = bundle/vimwiki
 	url = https://github.com/vimwiki/vimwiki.git
