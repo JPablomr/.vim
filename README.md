@@ -6,7 +6,7 @@
 - Run the following:
 
     ```
-    echo "source ~/.vim/.vim-settings" >> ~/.vimrc
+    echo "source ~/.vim/vim-settings" >> ~/.vimrc
     cd ~/.vim
     git submodule init
     git submodule update

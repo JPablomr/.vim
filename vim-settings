@@ -46,3 +46,5 @@ endfunction
 let ruby_space_errors=1
 " Terraform
 autocmd FileType terraform setlocal commentstring=#%s
+
+set backspace=indent,eol,start
